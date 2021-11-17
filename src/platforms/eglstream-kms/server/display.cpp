@@ -122,8 +122,7 @@ EGLContext create_context(EGLDisplay display, EGLConfig config, EGLContext share
 
 class DisplayBuffer
     : public mg::DisplaySyncGroup,
-      public mg::DisplayBuffer,
-      public mir::renderer::gl::RenderTarget
+      public mg::DisplayBuffer
 {
 public:
     DisplayBuffer(
@@ -224,7 +223,7 @@ public:
         return view_area_;
     }
 
-    bool overlay(const mir::graphics::RenderableList& /*renderlist*/) override
+    bool overlay(std::vector<mg::DisplayElement> const&) override
     {
         return false;
     }
