@@ -86,7 +86,7 @@ protected:
 /**
  * Interface to the display subsystem.
  */
-class Display : public renderer::gl::ContextSource
+class Display
 {
 public:
     /**
